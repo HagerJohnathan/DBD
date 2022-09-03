@@ -1,4 +1,24 @@
-# Main.py file for
-#  Dead by daylight Blood Web Project
-# Version 1.0 9-3-2022
-# Author: Johnathan Hager
+# Main
+
+# Imports
+import pyautogui
+import sys
+import time
+import numpy as np
+
+
+
+# To hold the coordinates of the nodes in the Blood Web
+Coords = [[234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          [234, 567, 999, 111], # XY for position
+          ]
+
+for x in Coords:
+  print(x)
+print(Coords[0][1])
