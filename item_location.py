@@ -1,25 +1,27 @@
 import pyautogui
 import time
+import cv2
+import os
 
 time.sleep(1)
-# print(pyautogui.locateOnScreen('num_9.png'))
-# coords = pyautogui.locateAllOnScreen('num_9.png')
-# for element in coords:
-#     print(element)
-# pyautogui.moveTo('num_9.png')
+# mylist = ["iconItems_toolboxWornOut",
+#           "iconItems_toolboxAlexs",
+#           "iconItems_toolboxCommodious",
+#           "iconItems_toolboxEngineers"]
+mylist = []
+path = "C:/DeadByDaylight_Project/DBD/Items"
+for (root, dirs, file) in os.walk(path):
+    for f in file:
+        if '.png' in f:
+            # print(f)
+            mylist.append(f)
+path = "Items/"
+list = [path + x for x in mylist]
+print(list)
 
-# x = 676
-# y = 462
-# RGB = 254
-# tolerance = 0
-# image = pyautogui.screenshot('items/screenshot.png')
-# color = image.getpixel((676, 462)) 
-# potato = pyautogui.pixelMatchesColor(x, y, (RGB, RGB, RGB), tolerance) # x, y, R G B, tolerance
-# print(potato)
-# print(color)
-
-# pyautogui.locateAllOnScreen('Items/num_9.png')
-# pyautogui.moveTo('Items/num_9.png')
-
-pyautogui.locateAllOnScreen('Items/iconItems_toolboxWornOut.png')
-pyautogui.moveTo('Items/iconItems_toolboxWornOut.png')
+# Locate images on screen and move mouse to them
+# for i in range(len(list)):
+#     x, y = pyautogui.locateCenterOnScreen(list[i], confidence=0.9)
+#     print(x,y)
+#     pyautogui.moveTo(x,y)
+#     time.sleep(0.5)
